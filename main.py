@@ -10,8 +10,6 @@ def calculate_balance(closed_with_TP):
     global tp_percentage
     global sl_percentage
 
-    print(static_balance)
-
     if closed_with_TP:
         dynamic_balance = dynamic_balance * (1 + tp_percentage)
         static_balance += position_volume * tp_percentage
