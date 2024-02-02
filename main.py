@@ -1,4 +1,4 @@
-from config import tp_percentage, sl_percentage
+from config import tp_percentage, sl_percentage, file_path
 from config import position_volume
 
 static_balance = position_volume
@@ -48,7 +48,4 @@ def analyze_results(file_path):
     print(f"Dinamik bakiye: {round(dynamic_balance, 2)}")
     print(f"Statik bakiye: {round(static_balance, 2)}")
     
-
-file_path = "C:\\Users\\user\\OneDrive\\Masaüstü\\Projects\\github repos\\SageBot\\data\\sagebot_result.csv"
-
 analyze_results(file_path)
