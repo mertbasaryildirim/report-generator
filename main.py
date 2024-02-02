@@ -1,3 +1,5 @@
+from config import tp_percentage, sl_percentage
+
 def analyze_results(file_path):
 
     total_trades = 0
