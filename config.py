@@ -1,5 +1,4 @@
-tp_percentage = 0.00050
-sl_percentage = 0.00050
+tp_percentage = 0.0050
+sl_percentage = 0.0050
 
-static_balance = True
-balance = 100
+position_volume = 100
