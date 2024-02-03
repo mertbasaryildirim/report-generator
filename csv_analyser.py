@@ -18,7 +18,6 @@ def calculate_balance(closed_with_TP):
         static_balance -= position_volume * sl_percentage
 
 def analyze_results(file_path):
-
     total_trades = 0
     correct_trades = 0
     incorrect_trades = 0
@@ -33,17 +32,16 @@ def analyze_results(file_path):
         if result == prediction:
             correct_trades += 1
             calculate_balance(True)
-            
         else:
             incorrect_trades += 1
             calculate_balance(False)
 
-    print(f"Toplam işlemler: {total_trades}")
-    print(f"Doğru tahminler: {correct_trades}")
-    print(f"Yanlış tahminler: {incorrect_trades}")
+    print(f"Total trades: {total_trades}")
+    print(f"Correct trades: {correct_trades}")
+    print(f"Incorrect trades: {incorrect_trades}")
     accuracy = correct_trades / total_trades * 100 if total_trades > 0 else 0
-    print(f"Doğruluk oranı: {accuracy:.2f}%")
-    print(f"Dinamik bakiye: {round(dynamic_balance, 2)}")
-    print(f"Statik bakiye: {round(static_balance, 2)}")
-    
+    print(f"Accuracy: {accuracy:.2f}%")
+    print(f"Dynamic balance: {round(dynamic_balance, 2)}")
+    print(f"Static balance: {round(static_balance, 2)}")
+
 analyze_results(file_path)
